@@ -1,0 +1,10 @@
+services:
+  nextjs:
+    image: node:20
+    command: sh -c "npm install -g pnpm && pnpm i && pnpm run dev"
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:3000
+    working_dir: /app
+
