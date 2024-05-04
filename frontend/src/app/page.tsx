@@ -1,62 +1,42 @@
 import Image from "next/image";
 import { Button } from "@/components/Button/Button";
+import JobCard from "@/components/Card/JobCard";
 
 export default function Home() {
   return (
-    <>
-      <div className="flex flex-col gap-4 p-10 bg-white">
-        <Button variant="colored" color="filled">
-          Button
-        </Button>
-        <Button variant="colored" color="filled" disabled>
-          Button
-        </Button>
-        <p>base filled</p>
-        <Button variant="base" color="filled">
-          Button
-        </Button>
-        <p>base filled disabled</p>
-        <Button variant="base" color="filled" disabled>
-          Button
-        </Button>
-        <p>clear filled</p>
-        <Button variant="clear" color="filled">
-          Button
-        </Button>
-        <p>clear filled disabled</p>
-        <Button variant="clear" color="filled" disabled>
-          Button
-        </Button>
-      </div>
-
-      <div className="flex flex-col gap-4 p-10 bg-[#0D93E0]">
-        <p>colored unfilled</p>
-        <Button variant="colored" color="unfilled">
-          Button
-        </Button>
-        <p>colored unfilled disabled</p>
-        <Button variant="colored" color="unfilled" disabled>
-          Button
-        </Button>
-        <p>base unfilled</p>
-        <Button variant="base" color="unfilled">
-          Button
-        </Button>
-        <p>base unfilled disabled</p>
-        <Button variant="base" color="unfilled" disabled>
-          Button
-        </Button>
-        <p>clear unfilled</p>
-        <Button variant="clear" color="unfilled">
-          Button
-        </Button>
-        <p>clear unfilled disabled</p>
-        <Button variant="clear" color="unfilled" disabled>
-          Button
-        </Button>
-      </div>
-
-      <p className="text-xl">Hello, Next.js</p>
-    </>
+    <div className="flex flex-col py-20">
+      <JobCard
+        image="/JobCardPhoto/jobcard1.webp"
+        hashtags={[
+          "NEW",
+          "インターン",
+          "学生インターン",
+          "週末からのコミットでもOK",
+          "オンライン面談OK",
+        ]}
+        title="コーポレート部門の長期インターンを募集します！"
+        description="コーポレート部門の長期インターンを募集します！ 営業や総務、経理部門を希望する方、幅広い視点で会社に関わってみたい方に最適です。 【具体的な業務内容】 ・営業業務のサポート（顧客対応 等） ・総務のサポート（入退社管理、勤怠管理 等） ・経理のサポート（日常仕分 等） ・その他上記に付随する業務 【求める人物像】 ・好奇心が旺盛で、様々な業務を経験してみたい方 ・臨機応変な対応が"
+        entryNumber={23}
+        companyLogo="/JobCardPhoto/jobcard1logo.webp"
+        companyName="株式会社ソフトバンク"
+        shareNumber={4}
+      />
+      <JobCard
+        image="/JobCardPhoto/jobcard1.webp"
+        hashtags={[
+          "NEW",
+          "インターン",
+          "学生インターン",
+          "週末からのコミットでもOK",
+          "オンライン面談OK",
+        ]}
+        title="コーポレート部門の長期インターンを募集します！"
+        description="コーポレート部門の長期インターンを募集します！ 営業や総務、経理部門を希望する方、幅広い視点で会社に関わってみたい方に最適です。 【具体的な業務内容】 ・営業業務のサポート（顧客対応 等） ・総務のサポート（入退社管理、勤怠管理 等） ・経理のサポート（日常仕分 等） ・その他上記に付随する業務 【求める人物像】 ・好奇心が旺盛で、様々な業務を経験してみたい方 ・臨機応変な対応が"
+        entryNumber={23}
+        companyLogo="/JobCardPhoto/jobcard1logo.webp"
+        companyName="株式会社ソフトバンク"
+        shareNumber={4}
+      />
+    </div>
   );
 }
