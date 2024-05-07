@@ -15,7 +15,7 @@ const JobCard = (props: {
   shareNumber: number;
 }) => {
   return (
-    <div className="hover:bg-gray-100 rounded-md w-[700px]">
+    <div className="hover:bg-gray-50 rounded-md w-[700px] p-2 border-b-2">
       <Link href="/projects/1">
         <div className="flex justify-center ">
           <Image
