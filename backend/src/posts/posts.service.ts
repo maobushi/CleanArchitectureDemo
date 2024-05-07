@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { PostType } from './posts.interface';
+import { prisma } from '@/lib/prisma';
 
 @Injectable()
 export class PostsService {
@@ -7,7 +8,19 @@ export class PostsService {
   findAll(): PostType[] {
     return this.items;
   }
-  create(itemData: PostType) {
-    this.items.push(itemData);
+
+  async create(itemData: PostType) {
+    await prisma.postType.create({
+      data: {
+        image: itemData.image,
+        hashtags: itemData.hashtags,
+        title: itemData.title,
+        description: itemData.description,
+        entryNumber: itemData.entryNumber,
+        companyLogo: itemData.companyLogo,
+        companyName: itemData.companyName,
+        shareNumber: itemData.shareNumber,
+      },
+    });
   }
 }

@@ -1,4 +1,5 @@
 export interface PostType {
+  id: number;
   image: string;
   hashtags: string[];
   title: string;
