@@ -2,14 +2,12 @@ FROM node:18
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm
-RUN pnpm install
+RUN pnpm i --frozen-lockfile
 
 COPY . .
 
-RUN pnpm run build
+RUN pnpm exec prisma generate
 
-EXPOSE 3000
-
-CMD ["pnpm", "run", "start:prod"]
+CMD ["sh", "entrypoint.dev.sh"]
