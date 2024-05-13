@@ -5,8 +5,9 @@ import { prisma } from '@/lib/prisma';
 @Injectable()
 export class PostsService {
   private readonly items: PostType[] = [];
-  findAll(): PostType[] {
-    return this.items;
+  async findAll(): Promise<PostType[]> {
+    const items = await prisma.postType.findMany();
+    return items;
   }
 
   async create(itemData: PostType) {

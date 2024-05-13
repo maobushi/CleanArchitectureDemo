@@ -6,7 +6,7 @@ export class PostsController {
   constructor(private readonly postsService: PostsService) {}
 
   @Get()
-  findAll(): PostType[] {
+  findAll(): Promise<PostType[]> {
     return this.postsService.findAll();
   }
 

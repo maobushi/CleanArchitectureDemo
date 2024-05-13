@@ -1,17 +1,7 @@
-// import { NextAuthConfig } from "next-auth";
-// import GoogleProvider from "next-auth/providers/google";
+import NextAuth from "next-auth";
+import GitHub from "next-auth/providers/github";
+import Google from "next-auth/providers/google";
 
-// export const config: NextAuthConfig = {
-//   providers: [GoogleProvider],
-//   basePath: "/auth", //APIのパス
-// callbacks: {
-//     authorized({request, auth}){
-//         try{
-//             const {}
-//             return true;
-//         } catch (error){
-//         console.log(error);
-//         }
-//     }
-// }
-// };
+export const { auth, handlers, signIn, signOut } = NextAuth({
+  providers: [GitHub, Google],
+});
