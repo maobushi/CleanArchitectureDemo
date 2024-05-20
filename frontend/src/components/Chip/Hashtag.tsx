@@ -3,7 +3,7 @@ import { Chip } from "@/components/ui/MuiComponents";
 import { Color } from "@/types/color";
 
 export const Hashtag = (props: { label: string; color: Color }) => {
-  return <Chip className="font-bold" label={props.label} color={props.color} />;
+  return <Chip className="font-bold text-xs px-1" size="small" label={props.label} color={props.color} />;
 };
 
 export const HashtagList = (props: { hashtags: string[] }) => {
