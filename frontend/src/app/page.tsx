@@ -1,13 +1,16 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/Button/Button";
 import JobCard from "@/components/Card/JobCard";
 import TabItem from "@/components/Button/TabItem";
 import HomeHeader from "@/components/Common/Header/HomeHeader";
+import JobCardSlide from "@/components/Slide/JobCardSlide";
 
 export default function Home() {
   return (
     <>
       <HomeHeader />
+      <JobCardSlide />
       <div className="flex flex-col py-20">
         <JobCard
           image="/JobCardPhoto/jobcard1.webp"
